@@ -10,6 +10,10 @@ def multuply_nums(a: float, b: float) -> float:
     return float(a) * float(b)
 
 
+def devide_nums(a: float, b: float) -> float:
+    return float(a) / float(b)
+
+
 print("""This is a simple calc that can add or substract 2 numbers
       Provide your expression below""")
 user_input = input().replace(" ", "")
@@ -26,3 +30,7 @@ elif '*' in user_input:
     first = user_input[:user_input.index('*')]
     second = user_input[user_input.index('*')+1:]
     print(f'The result of substaction is {multuply_nums(first, second)}')
+elif '/' in user_input:
+    first = user_input[:user_input.index('/')]
+    second = user_input[user_input.index('/')+1:]
+    print(f'The result of division is {devide_nums(first, second)}')
